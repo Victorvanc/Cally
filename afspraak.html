@@ -1,13 +1,13 @@
 <!DOCTYPE html>
-<!-- saved from url=(0048)file:///C:/Users/vvanc/Downloads/afspraak_1.html -->
-<html lang="nl"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-  
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<html lang="nl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Cally — Afspraak</title>
-  <meta name="theme-color" content="#0f1a14">
-  <link rel="preconnect" href="https://fonts.googleapis.com/">
-  <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin="">
-  <link href="./afspraak_files/css2" rel="stylesheet">
+  <meta name="theme-color" content="#0f1a14" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet" />
   <style>
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
     :root {
@@ -139,19 +139,27 @@
       color: var(--text-muted);
     }
   </style>
+  <!-- Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-R2HHFNRY0V"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-R2HHFNRY0V');
+  </script>
 </head>
 <body>
 <div class="card" id="card">
   <div class="logo">
     <div class="logo-mark">
       <svg width="16" height="16" viewBox="0 0 20 20" fill="none">
-        <path d="M10 2L10 10M10 10L6 6M10 10L14 6" stroke="#0f1a14" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
-        <rect x="3" y="13" width="14" height="5" rx="2" fill="#0f1a14"></rect>
+        <path d="M10 2L10 10M10 10L6 6M10 10L14 6" stroke="#0f1a14" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        <rect x="3" y="13" width="14" height="5" rx="2" fill="#0f1a14"/>
       </svg>
     </div>
     <h1>Cally</h1>
   </div>
-  <div id="inhoud"><div class="error">Ongeldige afspraaklink. Vraag de verzender om een nieuwe link te sturen.</div></div>
+  <div id="inhoud"></div>
 </div>
 
 <script>
@@ -165,6 +173,8 @@
     const [y, m, d] = datum.split('-');
     return d + '-' + m + '-' + y;
   }
+
+  function trackCalendar(type) { if(typeof gtag !== 'undefined') gtag('event', 'calendar_add', { event_category: 'engagement', event_label: type }); }
 
   function downloadIcs(titel, datum, tijd, eindtijd, locatie, omschrijving) {
     const start = formatIcal(datum, tijd);
@@ -239,6 +249,5 @@
     `;
   }
 </script>
-
-
-</body></html>
+</body>
+</html>
