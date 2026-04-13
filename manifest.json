@@ -2,7 +2,7 @@
   "name": "Cally",
   "short_name": "Cally",
   "description": "Maak afspraken en deel ze via WhatsApp. De ontvanger zet ze direct in zijn agenda.",
-  "start_url": "/",
+  "start_url": "/Cally/",
   "display": "standalone",
   "background_color": "#0f1a14",
   "theme_color": "#0f1a14",
@@ -10,13 +10,13 @@
   "lang": "nl",
   "icons": [
     {
-      "src": "icons/icon-192.png",
+      "src": "/Cally/icons/icon-192.png",
       "sizes": "192x192",
       "type": "image/png",
       "purpose": "any maskable"
     },
     {
-      "src": "icons/icon-512.png",
+      "src": "/Cally/icons/icon-512.png",
       "sizes": "512x512",
       "type": "image/png",
       "purpose": "any maskable"
